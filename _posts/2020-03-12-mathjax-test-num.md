@@ -24,3 +24,7 @@ $$\int_0^1f(x)dx=F(1)-F(0)$$
 
 {% raw %}{%{% endraw %} raw {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endraw {% raw %}%}{% endraw %}
+
+{% raw %}
+$$\int_0^1f(x)dx=F(1)-F(0)$$
+{% endraw %}
