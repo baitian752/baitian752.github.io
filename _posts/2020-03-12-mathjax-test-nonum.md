@@ -1,6 +1,6 @@
 ---
-layout: 'post-mathjax-num'
-title: 'MathJax Test'
+layout: 'post-mathjax'
+title: 'MathJax Test No Num'
 date: 2020-03-12 22:00:00 +0800
 ---
 
