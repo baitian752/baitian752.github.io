@@ -6,6 +6,8 @@ mathjax: true
 equation_number: true
 ---
 
+MathJax Test Num
+
 {% raw %}
 $ \int_0^1f(x)dx=F(1)-F(0) $
 
