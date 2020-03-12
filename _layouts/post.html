@@ -3,33 +3,6 @@ layout: default
 ---
 
 {% if page.mathjax %}
-
-<!-- {% if page.equation_number %}
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    },
-    'tags':' ams'
-  };
-</script>
-{% else %}
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    }
-  };
-</script>
-{% endif %}
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script> -->
-
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -38,16 +11,10 @@ layout: default
     tex2jax: {
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
       inlineMath: [['$','$']]
-    }
-  });
-</script>
-{% if page.equation_number %}
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
+    },
     TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
-{% endif %}
 {% endif %}
 
 <br>
@@ -55,7 +22,3 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 {{content}}
-
-<!-- {% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %} -->
