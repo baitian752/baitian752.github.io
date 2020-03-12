@@ -3,7 +3,7 @@ layout: post
 title: MathJax Test
 date: 2020-03-12 22:00:00 +0800
 mathjax: true
-equation_number: false
+equation_number: true
 ---
 
 {% raw %}
