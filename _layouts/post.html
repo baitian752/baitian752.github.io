@@ -41,6 +41,13 @@ layout: default
     }
   });
 </script>
+{% if page.equation_number %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+{% endif %}
 {% endif %}
 
 <br>
