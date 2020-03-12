@@ -9,13 +9,18 @@ equation_number: true
 MathJax Test
 
 {% raw %}
-$ \int_0^1f(x)dx=F(1)-F(0) $
 
-\(\int_0^1f(x)dx=F(1)-F(0)\)
+$\int_0^1f(x)dx=F(1)-F(0)$
 
-$$ \int_0^1f(x)dx=F(1)-F(0) $$
+\\(\int_0^1f(x)dx=F(1)-F(0)\\)
 
+
+$$\int_0^1f(x)dx=F(1)-F(0)$$
 \[ 
     \int_0^1f(x)dx=F(1)-F(0)
 \]
+
 {% endraw %}
+
+{% raw %}{%{% endraw %} raw {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endraw {% raw %}%}{% endraw %}
