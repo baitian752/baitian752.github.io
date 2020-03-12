@@ -6,14 +6,13 @@ mathjax: true
 equation_number: false
 ---
 
-{% raw %}
-$ \int_0^1f(x)dx=F(1)-F(0) $
+
+$\int_0^1f(x)dx=F(1)-F(0)$
 
 \(\int_0^1f(x)dx=F(1)-F(0)\)
 
 $$ \int_0^1f(x)dx=F(1)-F(0) $$
 
-\\[ 
+\[ 
     \int_0^1f(x)dx=F(1)-F(0)
-\\]
-{% endraw %}
+\]
