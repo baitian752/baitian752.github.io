@@ -15,3 +15,15 @@ $$ \int_0^1f(x)dx=F(1)-F(0) $$
 \[ 
     \int_0^1f(x)dx=F(1)-F(0)
 \]
+
+\begin{equation}
+   E = mc^2
+\end{equation}
+
+\begin{equation}
+   E = mc^2
+\end{equation}
+
+\begin{equation}
+   E = mc^2
+\end{equation}
