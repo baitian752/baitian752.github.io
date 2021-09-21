@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if page and page.meta and page.meta.index %}
+
+<h1>{{ page.meta.title if page.meta.title else 'Latest Posts'}}</h1>
+{% for item in nav|pages %}
+{% if item.url %}
+<p>
+<div style="font-size: x-small; font-weight: lighter; color: darkgray;">{{ item.meta.date.strftime('%Y年%m月%d日') }}</div>
+<a href="/{{ item.url }}">{{ item.title }}</a>
+</p>
+{% endif %}
+{% endfor %}
+
+{% else %}
+
+{% if page.edit_url %}
+<a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
+  {% include ".icons/material/pencil.svg" %}
+</a>
+{% endif %}
+{% if not "\x3ch1" in page.content %}
+<h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{{ page.content }}
+{% if page and page.meta %}
+{% if page.meta.git_revision_date_localized or
+page.meta.revision_date
+%}
+{% include "partials/source-file.html" %}
+{% endif %}
+{% endif %}
+
+{% endif %}
+
+{% endblock %}
+
+
+{% block disqus %}
+{% if page and page.meta and page.meta.index %}
+{% else %}
+<div id="remark42"></div>
+{% endif %}
+{% endblock %}

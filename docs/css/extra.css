@@ -1,0 +1,26 @@
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #03A9F4;
+  --md-accent-fg-color: #00BFA5;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 232;
+  --md-primary-fg-color: #E91E63;
+  --md-accent-fg-color: #FF80AB;
+}
+
+.md-typeset div.arithmatex {
+  overflow: initial;
+}
+
+[data-md-color-scheme="default"] .md-content article p img[src$=".svg"] {
+  filter: invert(9%) sepia(12%) saturate(0%) hue-rotate(182deg) brightness(87%) contrast(88%);
+}
+
+[data-md-color-scheme="slate"] .md-content article p img[src$=".svg"] {
+  filter: invert(87%) sepia(20%) saturate(150%) hue-rotate(197deg) brightness(103%) contrast(98%);
+}
+
+[data-md-color-scheme="slate"] .md-content article p img[src$=".png"] {
+  filter: invert(87%) sepia(20%) saturate(150%) hue-rotate(197deg) brightness(103%) contrast(98%);
+}
