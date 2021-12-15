@@ -1,0 +1,25 @@
+name: MkDocs site CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/mkdocs -v ${{ github.workspace }}/site:/srv/mkdocs/site \
+        ubuntu:latest /bin/bash -c "chmod -R 777 /srv/mkdocs \
+                                    && cd /src/mkdocs \
+                                    && apt update \
+                                    && apt install python3-pip -y \
+                                    && pip3 install -r requirements.txt \
+                                    && mkdocs build"
