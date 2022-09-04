@@ -1,0 +1,24 @@
+{{- if .Site.Params.math.katex.enable }}
+{{- if and (.IsPage) (or (.Site.Params.math.every_page) (isset .Params "mathjax")) }}
+<link rel="stylesheet" href="https://unpkg.com/katex@0.16.0/dist/katex.min.css">
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://unpkg.com/katex@0.16.0/dist/katex.min.js"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://unpkg.com/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, JSON.parse('{{ .Site.Params.math.options | jsonify }}'));"></script>
+{{- end }}
+{{- else if .Site.Params.math.mathjax.enable }}
+{{- if and (.IsPage) (or (.Site.Params.math.every_page) (isset .Params "mathjax")) }}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  }
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+{{- end }}
+{{- end }}
